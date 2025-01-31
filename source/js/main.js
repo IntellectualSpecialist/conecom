@@ -108,7 +108,7 @@ const initSlider = (sliderElement) => {
       breakpoints: {
         700: {
           slidesPerView: 2,
-          spaceBetween: 26,
+          spaceBetween: 25,
         },
       },
     });
