@@ -162,7 +162,6 @@ const initAllSliders = () => {
 };
 
 // FEATURES-CARDS
-
 const featuresCardElements = container.querySelector('.features-list');
 
 const openDescription = (evt) => {
