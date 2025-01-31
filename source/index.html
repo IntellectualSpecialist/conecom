@@ -4,27 +4,467 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
+    <title>Conecom</title>
+    <meta name="description" content="Российское подразделение французской группы DuffBeer.">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+  <body>
+    <div class="container">
+      <main>
+        <section class="hero">
+          <div class="container-inner">
+            <header class="hero__header main-header">
+              <div class="hero__logo logo">
+                <img src="/__spritemap#sprite-logo-view" width="153" height="19" alt="Логотип">
+              </div>
+            </header>
+            <div class="hero__content">
+              <h1 class="hero__title title-l">Conecom</h1>
+              <p class="hero__description">российское подразделение французской группы DuffBeer</p>
+            </div>
+            <div class="hero__image">
+              <picture>
+                <source width="1250" height="599" type="image/webp" media="(min-width: 1340px)" srcset="img/hero-bg-l@1x.webp, img/hero-bg-l@2x.webp 2x">
+                <source width="930" height="599" type="image/webp" media="(min-width: 1020px)" srcset="img/hero-bg-m@1x.webp, img/hero-bg-m@2x.webp 2x">
+                <source width="610" height="314" type="image/webp" srcset="img/hero-bg-s@1x.webp, img/hero-bg-s@2x.webp 2x">
+                <source width="1250" height="599" type="image/jpeg" media="(min-width: 1340px)" srcset="img/hero-bg-l@1x.jpg, img/hero-bg-l@2x.jpg 2x">
+                <source width="930" height="599" type="image/jpeg" media="(min-width: 1020px)" srcset="img/hero-bg-m@1x.jpg, img/hero-bg-m@2x.jpg 2x">
+                <img src="img/hero-bg-s@1x.jpg" srcset="img/hero-bg-s@2x.jpg 2x" width="610" height="314" alt="Сотрудники в униформе у цистерн.">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <article class="about">
+          <h2 class="visually-hidden">О нас</h2>
+          <div class="container-inner">
+            <div class="about__content">
+              <div class="about__experience">
+                <img src="/__spritemap#sprite-experience-view" width="90" height="54" alt="167 лет нашего опыта.">
+              </div>
+              <div class="about__text-content text-content">
+                <p>DuffBeer&nbsp;&mdash; один из&nbsp;мировых лидеров по&nbsp;производству дрожжей и&nbsp;других продуктов ферментации. И&nbsp;нам нужна сильная команда профессионалов и&nbsp;единомышленников, которые будут стремиться развиваться вместе с&nbsp;DuffBeer.</p>
+                <p>Мы&nbsp;всегда рады принять талантливых и&nbsp;целеустремленных людей в&nbsp;нашу дружную команду! Мы&nbsp;ценим каждого своего сотрудника и&nbsp;стремимся предоставить всем равные возможности в&nbsp;развитии и&nbsp;совершенств.</p>
+              </div>
+            </div>
+            <div class="about__player player" data-src="https://www.youtube.com/embed/GAhl81QthyE?si=35h1aEJhrzo5fLpP">
+              <div class="player__placeholder">
+                <picture>
+                  <source width="545" height="365" type="image/webp" media="(min-width: 1340px)" srcset="img/player-image-l@1x.webp, img/player-image-l@2x.webp 2x">
+                  <source width="405" height="271" type="image/webp" media="(min-width: 1020px)" srcset="img/player-image-m@1x.webp, img/player-image-m@2x.webp 2x">
+                  <source width="541" height="361" type="image/webp" media="(min-width: 700px)" srcset="img/player-image-s@1x.webp, img/player-image-s@2x.webp 2x">
+                  <source width="260" height="174" type="image/webp" srcset="img/player-image-xs@1x.webp, img/player-image-xs@2x.webp 2x">
+                  <source width="545" height="365" type="image/jpeg" media="(min-width: 1340px)" srcset="img/player-image-l@1x.jpg, img/player-image-l@2x.jpg 2x">
+                  <source width="405" height="271" type="image/jpeg" media="(min-width: 1020px)" srcset="img/player-image-m@1x.jpg, img/player-image-m@2x.jpg 2x">
+                  <source width="541" height="361" type="image/jpeg" media="(min-width: 700px)" srcset="img/player-image-s@1x.jpg, img/player-image-s@2x.jpg 2x">
+                  <img src="img/player-image-xs@1x.jpg" srcset="img/player-image-xs@2x.jpg 2x" width="260" height="174" alt="Видео.">
+                </picture>
+              </div>
+              <a class="player__button" href="https://www.youtube.com/live/GAhl81QthyE?si=35h1aEJhrzo5fLpP" target="_blank" rel="noopener noreferrer">
+                <span class="visually-hidden">Воспроизвести видео</span>
+                <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap#sprite-play-icon"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <section class="mission">
+          <div class="mission__top">
+            <div class="container-inner">
+              <p>Каждое 3-е хлебобулочное изделие в&nbsp;мире произведено с&nbsp;использованием продукции DuffBeer</p>
+            </div>
+          </div>
+          <div class="mission__bottom">
+            <div class="container-inner">
+              <div class="mission__text-content">
+                <h2 class="mission__title">Миссия DuffBeer</h2>
+                <p class="mission__description">Работать вместе, что&nbsp;бы лучше накормить и&nbsp;сохранить планету</p>
+                <a class="mission__button button" href="#" target="_blank" rel="noopener noreferrer">Перейти на сайт</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features">
+          <div class="container-inner">
+            <h2 class="features__title title-m">Наши преимущества</h2>
+            <div class="features__slider slider">
+              <div class="slider__swiper swiper">
+                <div class="features__list features-list slider__wrapper swiper-wrapper">
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-1-l@1x.webp, img/features-1-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-1-m@1x.webp, img/features-1-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-1-l@1x.jpg, img/features-1-l@2x.jpg 2x">
+                          <img src="img/features-1-m@1x.jpg" srcset="img/player-image-xs@2x.jpg 2x" width="260" height="178" alt="Силуеты матери и ребенка на фоне заката.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Уверенность в&nbsp;завтрашнем дне</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">ООО &laquo;Conecom&raquo;, российское подразделение французского концерна Lesaffre. Мы&nbsp;компания, которая честно ведет свой бизнес на&nbsp;территории&nbsp;РФ, соблюдая законодательство и&nbsp;гарантируя стабильность и&nbsp;уверенность в&nbsp;завтрашнем дне.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-1-l@1x.webp, img/features-1-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-1-m@1x.webp, img/features-1-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-1-l@1x.jpg, img/features-1-l@2x.jpg 2x">
+                          <img src="img/features-1-m@1x.jpg" srcset="img/features-1-m@2x.jpg 2x" width="260" height="178" alt="Силуеты матери и ребенка на фоне заката.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Уверенность в&nbsp;завтрашнем дне</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">ООО &laquo;Conecom&raquo;, российское подразделение французского концерна Lesaffre. Мы&nbsp;компания, которая честно ведет свой бизнес на&nbsp;территории&nbsp;РФ, соблюдая законодательство и&nbsp;гарантируя стабильность и&nbsp;уверенность в&nbsp;завтрашнем дне.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-2-l@1x.webp, img/features-2-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-2-m@1x.webp, img/features-2-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-2-l@1x.jpg, img/features-2-l@2x.jpg 2x">
+                          <img src="img/features-2-m@1x.jpg" srcset="img/features-2-m@2x.jpg 2x" width="260" height="178" alt="Специалист по безопасности проверяет оборудование.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Безопасность на&nbsp;рабочем месте&nbsp;&mdash; приоритет &#8470;&nbsp;1</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Вопросам безопасности и&nbsp;качества пищевой продукции в&nbsp;нашей компании уделяется повышенное внимание. Все производства группы DuffBeer в&nbsp;России постоянно работают над улучшением процессов и&nbsp;стремятся сделать все возможное, чтобы рабочий процесс был максимально безопасным и&nbsp;комфортным.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-3-l@1x.webp, img/features-3-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-3-m@1x.webp, img/features-3-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-3-l@1x.jpg, img/features-3-l@2x.jpg 2x">
+                          <img src="img/features-3-m@1x.jpg" srcset="img/features-3-m@2x.jpg 2x" width="260" height="178" alt="Мужчина смотрет вдаль.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Стабильная заработная плата</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Мы&nbsp;обеспечиваем нашим сотрудникам стабильную заработную плату в&nbsp;соответствии с&nbsp;рынком региона. Средний стаж работы в&nbsp;нашей компании&nbsp;&mdash; 7&nbsp;лет.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-4-l@1x.webp, img/features-4-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-4-m@1x.webp, img/features-4-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-4-l@1x.jpg, img/features-4-l@2x.jpg 2x">
+                          <img src="img/features-4-m@1x.jpg" srcset="img/features-4-m@2x.jpg 2x" width="260" height="178" alt="Сотрудник на приеме у врача.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Заботимся о&nbsp;здоровье сотрудников</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Каждый сотрудник в&nbsp;нашей компании обеспечен полисом добровольного медицинского страхования. Кроме того, на&nbsp;каждом заводе есть медицинский пункт для сотрудников. Осуществляется страхование от&nbsp;несчастных случаев с&nbsp;первого дня работы.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-5-l@1x.webp, img/features-5-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-5-m@1x.webp, img/features-5-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-5-l@1x.jpg, img/features-5-l@2x.jpg 2x">
+                          <img src="img/features-5-m@1x.jpg" srcset="img/features-5-m@2x.jpg 2x" width="260" height="178" alt="Сотрудник в СИЗ у оборудования.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Предоставление удобной спецодежды и&nbsp;СИЗ для производственного персонала</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Мы&nbsp;предоставляем удобные СИЗ и&nbsp;спецодежду и&nbsp;в&nbsp;случае износа или порчи обмениваются на&nbsp;новые.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-6-l@1x.webp, img/features-6-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-6-m@1x.webp, img/features-6-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-6-l@1x.jpg, img/features-6-l@2x.jpg 2x">
+                          <img src="img/features-6-m@1x.jpg" srcset="img/features-6-m@2x.jpg 2x" width="260" height="178" alt="Обучающиеся в аудитории слушают лектора и смотрят презентацию.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Обучение: различные программы обучения и&nbsp;профессиональные тренинги</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Мы&nbsp;уделяем много внимания развитию наших сотрудников. В&nbsp;компании работает Внутренний центр обучений и&nbsp;ежегодно проводится большое количество обучающих мероприятий как локально на&nbsp;заводах, так и&nbsp;в&nbsp;головном офисе DuffBeer во&nbsp;Франции.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-7-l@1x.webp, img/features-7-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-7-m@1x.webp, img/features-7-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-7-l@1x.jpg, img/features-7-l@2x.jpg 2x">
+                          <img src="img/features-7-m@1x.jpg" srcset="img/features-7-m@2x.jpg 2x" width="260" height="178" alt="Сотрудники на выезде на природе смотряю в камеру и машут.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Возможности для реализации творческого потенциала</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Мы&nbsp;ставим перед собой амбициозные и&nbsp;интересные цели, а&nbsp;реализация задач является командной работой сотрудников из&nbsp;различных подразделений. Мы&nbsp;также принимаем активное участие в&nbsp;работе над кросс-функциональными проектам с&nbsp;коллегами из&nbsp;других стран присутствия DuffBeer.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-8-l@1x.webp, img/features-8-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-8-m@1x.webp, img/features-8-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-8-l@1x.jpg, img/features-8-l@2x.jpg 2x">
+                          <img src="img/features-8-m@1x.jpg" srcset="img/features-8-m@2x.jpg 2x" width="260" height="178" alt="Сотрудники с детьми на празднике.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Мы&nbsp;&mdash; семейная компания и&nbsp;любим проводить время вместе</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Ежегодно мы&nbsp;проводим корпоративные мероприятия не&nbsp;только для наших сотрудников, но&nbsp;и&nbsp;для семей наших сотрудников. А&nbsp;корпоративные подарки для детей сотрудников&nbsp;&mdash; наша добрая предновогодняя традиция.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features__item slider__slide swiper-slide">
+                    <div class="feature-card">
+                      <div class="feature-card__image">
+                        <picture>
+                          <source width="356" height="178" type="image/webp" media="(min-width: 1340px)" srcset="img/features-9-l@1x.webp, img/features-9-l@2x.webp 2x">
+                          <source width="260" height="178" type="image/webp" srcset="img/features-9-m@1x.webp, img/features-9-m@2x.webp 2x">
+                          <source width="356" height="178" type="image/jpeg" media="(min-width: 1340px)" srcset="img/features-9-l@1x.jpg, img/features-9-l@2x.jpg 2x">
+                          <img src="img/features-9-m@1x.jpg" srcset="img/features-9-m@2x.jpg 2x" width="260" height="178" alt="Сотрудник трогает траву.">
+                        </picture>
+                      </div>
+                      <div class="feature-card__text-content">
+                        <h3 class="feature-card__title">Мы&nbsp;&mdash; социально ответственная компания и&nbsp;заботимся об&nbsp;окружающих</h3>
+                        <div class="feature-card__description-wrapper">
+                          <p class="feature-card__description">Наша миссия лежит в&nbsp;основе социально-корпоративной ответственности. Мы&nbsp;ведем свою деятельность в&nbsp;соответствии с&nbsp;тремя основными правилами: мы&nbsp;заботимся о&nbsp;людях; наша деятельность устойчива по&nbsp;своей природе; мы&nbsp;заботимся об&nbsp;окружающей среде.</p>
+                        </div>
+                        <button class="feature-card__button button-plus">
+                          <span class="visually-hidden">Показать подробнее</span>
+                          <svg width="32" height="21" viewBox="0 0 32 21" role="img" aria-hidden="true" focusable="false">
+                            <use href="/__spritemap#sprite-plus-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__pagination swiper-pagination">
+                <button class="slider__pagination-button slider__pagination-button--active" type="button">
+                  <span class="visually-hidden">Слайд 1</span>
+                </button>
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">Слайд 2</span>
+                </button>
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">Слайд 3</span>
+                </button>
+              </div>
+              <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
+              <button class="slider__button slider__button--next swiper-button-next" type="button">
+                <span class="visually-hidden">Cледующий слайд</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="stats">
+          <div class="container-inner">
+            <h2 class="stats__title">DuffBeer</h2>
+            <p class="stats__description">Ключевой мировой игрок в&nbsp;области ферментации</p>
+            <div class="stats__slider slider slider--alt">
+              <div class="slider__swiper swiper">
+                <div class="stats__list slider__wrapper swiper-wrapper">
+                  <div class="stats__item slider__slide swiper-slide">
+                    <div class="stats-card">
+                      <div class="stats-card__image">
+                        <picture>
+                          <source width="565" height="294" type="image/webp" media="(min-width: 1340px)" srcset="img/stats-1-l@1x.webp, img/stats-1-l@2x.webp 2x">
+                          <source width="454" height="294" type="image/webp" media="(min-width: 1020px)" srcset="img/stats-1-m@1x.webp, img/stats-1-m@2x.webp 2x">
+                          <source width="260" height="294" type="image/webp" srcset="img/stats-1-s@1x.webp, img/stats-1-s@2x.webp 2x">
+                          <source width="565" height="294" type="image/jpeg" media="(min-width: 1340px)" srcset="img/stats-1-l@1x.jpg, img/stats-1-l@2x.jpg 2x">
+                          <source width="454" height="294" type="image/jpeg" media="(min-width: 1020px)" srcset="img/stats-1-m@1x.jpg, img/stats-1-m@2x.jpg 2x">
+                          <img src="img/stats-1-s@1x.jpg" srcset="img/stats-1-s@2x.jpg 2x" width="260" height="294" alt="Сотрудники на встрече.">
+                        </picture>
+                      </div>
+                      <div class="stats-card__text-content">
+                        <p>10&nbsp;700+ сотрудников</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats__item slider__slide swiper-slide">
+                    <div class="stats-card stats-card--accent">
+                      <div class="stats-card__image">
+                        <picture>
+                          <source width="260" height="294" type="image/webp" srcset="img/stats-2-l@1x.webp, img/stats-2-l@2x.webp 2x">
+                          <img src="img/stats-2-l@1x.jpg" srcset="img/stats-2-l@2x.jpg 2x" width="260" height="294" alt="Научная экспертка.">
+                        </picture>
+                      </div>
+                      <div class="stats-card__text-content">
+                        <p>570 экспертов R&D</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats__item slider__slide swiper-slide">
+                    <div class="stats-card stats-card--no-img stats-card--accent">
+                      <div class="stats-card__text-content">
+                        <svg width="162" height="73" viewBox="0 0 162 73" role="img" aria-label="167">
+                          <use href="/__spritemap#sprite-167"></use>
+                        </svg>
+                        <p>лет опыта<br>на&nbsp;рынке хлебопечения</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats__item slider__slide swiper-slide">
+                    <div class="stats-card">
+                      <div class="stats-card__image">
+                        <picture>
+                          <source width="565" height="294" type="image/webp" media="(min-width: 1340px)" srcset="img/stats-3-l@1x.webp, img/stats-3-l@2x.webp 2x">
+                          <source width="396" height="294" type="image/webp" srcset="img/stats-3-m@1x.webp, img/stats-3-m@2x.webp 2x">
+                          <source width="565" height="294" type="image/jpeg" media="(min-width: 1340px)" srcset="img/stats-3-l@1x.jpg, img/stats-3-l@2x.jpg 2x">
+                          <img src="img/stats-3-m@1x.jpg" srcset="img/stats-3-m@2x.jpg 2x" width="396" height="294" alt="Поле.">
+                        </picture>
+                      </div>
+                      <div class="stats-card__text-content">
+                        <p>25+&nbsp;лет в&nbsp;Росии</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats__item slider__slide swiper-slide">
+                    <div class="stats-card">
+                      <div class="stats-card__image">
+                        <picture>
+                          <source width="565" height="294" type="image/webp" media="(min-width: 1340px)" srcset="img/stats-4-l@1x.webp, img/stats-4-l@2x.webp 2x">
+                          <source width="454" height="294" type="image/webp" srcset="img/stats-4-m@1x.webp, img/stats-4-m@2x.webp 2x">
+                          <source width="565" height="294" type="image/jpeg" media="(min-width: 1340px)" srcset="img/stats-4-l@1x.jpg, img/stats-4-l@2x.jpg 2x">
+                          <img src="img/stats-4-m@1x.jpg" srcset="img/stats-4-m@2x.jpg 2x" width="454" height="294" alt="Завод.">
+                        </picture>
+                      </div>
+                      <div class="stats-card__text-content">
+                        <p>Филиалы в&nbsp;50&nbsp;странах</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats__item slider__slide swiper-slide">
+                    <div class="stats-card stats-card--no-img stats-card--accent">
+                      <div class="stats-card__text-content">
+                        <svg width="59" height="77" viewBox="0 0 59 77" role="img" aria-label="4">
+                          <use href="/__spritemap#sprite-4"></use>
+                        </svg>
+                        <p>направления деятельности</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__pagination swiper-pagination">
+                <button class="slider__pagination-button slider__pagination-button--active" type="button">
+                  <span class="visually-hidden">Слайд 1</span>
+                </button>
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">Слайд 2</span>
+                </button>
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">Слайд 3</span>
+                </button>
+              </div>
+              <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
+              <button class="slider__button slider__button--next swiper-button-next" type="button">
+                <span class="visually-hidden">Cледующий слайд</span>
+              </button>
+            </div>
+          </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script type="module" src="js/main.js"></script>
   </body>
 
