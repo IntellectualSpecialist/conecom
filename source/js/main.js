@@ -66,6 +66,7 @@ const initSlider = (sliderElement) => {
   let sliderNavigationNextElement;
   let swiperElement;
   let sliderPaginatonElement;
+  let resizeObserver;
 
   if (sliderElement) {
     swiperElement = sliderElement.querySelector('.slider__swiper');
@@ -74,12 +75,6 @@ const initSlider = (sliderElement) => {
     sliderNavigationNextElement = sliderElement.querySelector('.swiper-button-next');
     sliderPaginatonElement = sliderElement.querySelector('.slider__pagination');
   }
-
-  const resizeObserver = new ResizeObserver((entries) => {
-    entries.forEach(() => {
-      slider.updateAutoHeight(300);
-    });
-  });
 
   const createSlider = () => {
     slider = new Swiper(swiperElement, {
@@ -114,6 +109,13 @@ const initSlider = (sliderElement) => {
     });
 
     slider.init();
+
+    resizeObserver = new ResizeObserver((entries) => {
+      entries.forEach(() => {
+        slider.updateAutoHeight(300);
+      });
+    });
+
     slider.slides.forEach((slide) => {
       resizeObserver.observe(slide);
     });
@@ -122,6 +124,7 @@ const initSlider = (sliderElement) => {
   const destroySlider = () => {
     if (slider) {
       slider.destroy(true, true);
+      resizeObserver.disconnect();
     }
   };
 
