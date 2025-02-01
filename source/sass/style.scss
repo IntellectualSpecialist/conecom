@@ -446,6 +446,7 @@ body {
     display: block;
     min-width: 260px;
     min-height: 174.09px;
+    aspect-ratio: 260 / 174.09;
     width: 100%;
   }
 
@@ -528,12 +529,15 @@ body {
 
 .player__video {
   position: relative;
-  border: 0;
+  display: block;
   width: 100%;
   height: 100%;
+  min-width: 260px;
+  min-height: 174.09px;
   aspect-ratio: 260 / 174.09;
   object-fit: cover;
   background-color: #000000;
+  border: 0;
 
   @media (min-width: $s-width) {
     width: 540px;
